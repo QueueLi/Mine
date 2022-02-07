@@ -29,7 +29,8 @@ local libs = {
     }
 }
 
-
+shell.execute("md /home/images/one_armed_creeper/")
+shell.execute("md md /lib/FormatModules")
 shell.execute("wget -f https://raw.githubusercontent.com/QueueLi/Mine/main/Slot.txt" .. " /home/Slot.lua")
 shell.execute("wget -f " .. REPOSITORY .. "/libs/slot_machine.lua /lib/slot_machine.lua")
 shell.execute("wget -f " .. REPOSITORY .. "/config/settings.lua /lib/settings.lua")

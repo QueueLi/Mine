@@ -194,6 +194,7 @@ while true do
 buffer.drawText(76, 23, 0xffffff,  moneycas)
     resetBets()
     local ready = false
+    payed = payed - money
     while true do
 	buffer.drawText(76, 23, 0xffffff,  moneycas)
         local e, _, left, top, clickType, _ = event.pull("touch")
@@ -231,11 +232,12 @@ buffer.drawText(76, 23, 0xffffff,  moneycas)
 		message("Ваши Средства: " .. moneycas)
             dellTQ(moneycas)
 			moneycas = 0
+			payed = moneycas
 			buffer.drawText(76, 23, 0xffffff,  moneycas)
         	end
 		end
 		end
-	    payed = moneycas
+	   
 	    
             if left >= 75 and left <= 110 and top >= 25 and top <= 27 then
                 if ready then

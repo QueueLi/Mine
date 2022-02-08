@@ -201,18 +201,7 @@ buffer.drawText(76, 23, 0xffffff,  moneycas)
         if (e ~= nil) then
             local number, money = 0, 1 + clickType * 9
 		
-	   
-	    
-            if left >= 75 and left <= 110 and top >= 25 and top <= 27 then
-                if ready then
-                    break
-                else
-                    message("Недоступно до первой ставки")
-                end
-            end
-	    
-            if (fixClicks(left, top)) then
-              --  up button
+	   --  up button
 		if left >= 75 and left <= 110 and top >= 29 and top <= 31 then 
         if ready then
                     message("Сначала завершите игру")
@@ -249,6 +238,17 @@ buffer.drawText(76, 23, 0xffffff,  moneycas)
         	end
 		end
 		end
+	    
+            if left >= 75 and left <= 110 and top >= 25 and top <= 27 then
+                if ready then
+                    break
+                else
+                    message("Недоступно до первой ставки")
+                end
+            end
+	    
+            if (fixClicks(left, top)) then
+              
                 if (payed - money >= 0) then
                     ready = true
                     if (left > 18) and (left < 102) and (top > 1) and (top < 13) then

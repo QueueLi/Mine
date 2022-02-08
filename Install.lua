@@ -28,7 +28,7 @@ local libs = {
         path = "/lib/slot_machine.lua"
     }
 }
-
+--wget -f https://raw.githubusercontent.com/QueueLi/Mine/main/Roul.txt /home/Roul.lua
 shell.execute("md /home/images/one_armed_creeper/")
 shell.execute("md md /lib/FormatModules")
 shell.execute("wget -f https://raw.githubusercontent.com/QueueLi/Mine/main/Roul.txt" .. " /home/Roul.lua")

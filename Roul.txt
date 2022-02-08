@@ -241,7 +241,7 @@ buffer.drawText(76, 23, 0xffffff,  moneycas)
 		message("Ваши Средства: " .. moneycas)
             dellTQ(moneycas)
 			moneycas = 0
-			payed = moneycas
+			
 			buffer.drawText(76, 23, 0xffffff,  moneycas)
         	end
 		end

@@ -235,7 +235,7 @@ buffer.drawText(76, 23, 0xffffff,  moneycas)
         	end
 		end
 		end
-	    
+	    payed = moneycas
 	    
             if left >= 75 and left <= 110 and top >= 25 and top <= 27 then
                 if ready then

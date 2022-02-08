@@ -197,7 +197,9 @@ buffer.drawText(76, 23, 0xffffff,  moneycas)
     while true do
 	buffer.drawText(76, 23, 0xffffff,  moneycas)
         local e, _, left, top, clickType, _ = event.pull("touch")
-		
+			
+        if (e ~= nil) then
+            local number, money = 0, 1 + clickType * 9
 		--  up button
 		if left >= 75 and left <= 110 and top >= 29 and top <= 31 then 
         if ready then
@@ -215,8 +217,8 @@ buffer.drawText(76, 23, 0xffffff,  moneycas)
 	
 	end
 	end
-	end
-		 --  dellmoney button
+	end	
+             --  dellmoney button
         if left >= 75 and left <= 110 and top == 28 then
 		if ready then
                     message("Сначала завершите игру")
@@ -230,18 +232,11 @@ buffer.drawText(76, 23, 0xffffff,  moneycas)
             dellTQ(moneycas)
 			moneycas = 0
 			buffer.drawText(76, 23, 0xffffff,  moneycas)
-        end
+        	end
 		end
 		end
-		
-		
-		
-		
-		
-        if (e ~= nil) then
-            local number, money = 0, 1 + clickType * 9
-			
-            
+	    
+	    
             if left >= 75 and left <= 110 and top >= 25 and top <= 27 then
                 if ready then
                     break
